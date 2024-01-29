@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:movie_app/api/ApiProvider.dart';
 import 'package:movie_app/models/trending_model.dart';
-import 'package:movie_app/widgets/upcomingmovies.dart';
+import 'package:movie_app/Common%20widgets/upcomingmovies.dart';
 
 import '../models/toprated_model.dart';
 import '../models/upcoming_model.dart';
 import '../utils/colors.dart';
-import '../widgets/mostrated.dart';
-import '../widgets/trending.dart';
+import '../Common widgets/mostrated.dart';
+import '../Common widgets/trending.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -33,9 +33,15 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: background,
+      backgroundColor: black,
       appBar: AppBar(
-        title: Text('Netflix Clone'),
+        backgroundColor: black,
+        title: Center(
+          child: Text(
+            'Netflix Clone',
+            style: GoogleFonts.rocknRollOne(color: white),
+          ),
+        ),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -46,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 Text(
                   'Trending Now',
-                  style: GoogleFonts.rocknRollOne(fontSize: 22),
+                  style: GoogleFonts.rocknRollOne(fontSize: 22, color: white),
                 ),
                 const SizedBox(
                   height: 10,
@@ -77,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 Text(
                   'Most rated movies',
-                  style: GoogleFonts.rocknRollOne(fontSize: 22),
+                  style: GoogleFonts.rocknRollOne(fontSize: 22, color: white),
                 ),
                 const SizedBox(
                   height: 10,
@@ -108,7 +114,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 Text(
                   'Upcoming movies',
-                  style: GoogleFonts.rocknRollOne(fontSize: 22),
+                  style: GoogleFonts.rocknRollOne(fontSize: 22, color: white),
                 ),
                 const SizedBox(
                   height: 10,

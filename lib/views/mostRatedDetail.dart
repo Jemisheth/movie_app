@@ -16,6 +16,7 @@ class MostRatedScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: black,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -31,12 +32,13 @@ class MostRatedScreen extends StatelessWidget {
                     child: Container(
                       height: size.height * .6,
                       width: double.infinity,
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         color: Colors.amber,
-                        borderRadius: BorderRadius.only(
+                        borderRadius: const BorderRadius.only(
                           bottomLeft: Radius.circular(20),
                           bottomRight: Radius.circular(20),
                         ),
+                        border: Border.all()
                       ),
                       child: Image.network(
                         '${Constants.imagePath}${movies.posterPath}',
@@ -68,21 +70,21 @@ class MostRatedScreen extends StatelessWidget {
                   children: [
                     Text(
                       'Movie Name: ${movies.title}',
-                      style: GoogleFonts.rocknRollOne(fontSize: 16),
+                      style: GoogleFonts.rocknRollOne(fontSize: 16, color: white),
                     ),
                     const SizedBox(
                       height: 8,
                     ),
                     Text(
                       'Overview: ${movies.overview}',
-                      style: GoogleFonts.rocknRollOne(fontSize: 16),
+                      style: GoogleFonts.rocknRollOne(fontSize: 14, color: white),
                     ),
                     const SizedBox(
                       height: 8,
                     ),
                     Text(
                       'Release Date: ${movies.releaseDate}',
-                      style: GoogleFonts.rocknRollOne(fontSize: 16),
+                      style: GoogleFonts.rocknRollOne(fontSize: 14, color: white),
                     ),
                     const SizedBox(
                       height: 8,

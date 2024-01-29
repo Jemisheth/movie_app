@@ -14,6 +14,7 @@ class UpomingMovieDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: black,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -66,28 +67,32 @@ class UpomingMovieDetail extends StatelessWidget {
                   children: [
                     Text(
                       'Movie Name: ${upcomingMovies.title}',
-                      style: GoogleFonts.rocknRollOne(fontSize: 16),
+                      style:
+                          GoogleFonts.rocknRollOne(fontSize: 16, color: white),
                     ),
                     const SizedBox(
                       height: 8,
                     ),
                     Text(
                       'Overview: ${upcomingMovies.overview}',
-                      style: GoogleFonts.rocknRollOne(fontSize: 16),
+                      style:
+                          GoogleFonts.rocknRollOne(fontSize: 14, color: white),
                     ),
                     const SizedBox(
                       height: 8,
                     ),
                     Text(
                       'Release Date: ${upcomingMovies.releaseDate}',
-                      style: GoogleFonts.rocknRollOne(fontSize: 16),
+                      style:
+                          GoogleFonts.rocknRollOne(fontSize: 14, color: white),
                     ),
                     const SizedBox(
                       height: 8,
                     ),
                     Text(
                       'Total votes: ${upcomingMovies.voteCount}',
-                      style: GoogleFonts.rocknRollOne(fontSize: 16),
+                      style:
+                          GoogleFonts.rocknRollOne(fontSize: 14, color: white),
                     ),
                   ],
                 ),
